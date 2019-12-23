@@ -5,8 +5,8 @@ services:
     build:
       context: .
     ports:
-      - 8888:8888
+      - "127.0.0.1:8080:8080"
     volumes:
       - ./app:/app
     command: >
-      sh -c "python manage.py runserver 0.0.0.0:8888"
+      sh -c "python manage.py runserver 0.0.0.0:8080"
