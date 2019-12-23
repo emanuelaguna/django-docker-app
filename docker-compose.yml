@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  django-1:
+    build:
+      context: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8888"
